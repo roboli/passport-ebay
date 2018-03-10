@@ -20,7 +20,17 @@ export default class eBayStrategy extends OAuth2Strategy {
     options.useExactURLs = true;
     options.skipUserProfile = true;
 
-    super(options, verify);
+    let cb;
+
+    if(verify) {
+      if(options.passReqToCallback) {
+        cb = (req, accessToken, refreshToken, noProfile, done) => verify(req, accessToken, refreshToken, done);
+      } else {
+        cb = (accessToken, refreshToken, noProfile, done) => verify(accessToken, refreshToken, done);
+      }
+    }
+
+    super(options, cb);
 
     this.name = 'ebay';
   }
