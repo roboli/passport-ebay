@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
+    "prepublish": "npm run build"
     "test": "mocha --require babel-core/register"
   },
   "keywords": [
@@ -14,6 +15,10 @@
     "authentication"
   ],
   "author": "robertooliveros@mac.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roboli/passport-ebay.git"
+  },
   "license": "MIT",
   "licenses": [
     {
