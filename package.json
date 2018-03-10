@@ -14,7 +14,13 @@
     "authentication"
   ],
   "author": "robertooliveros@mac.com",
-  "license": "ISC",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.6.1",
